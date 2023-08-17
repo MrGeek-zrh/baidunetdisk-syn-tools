@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-token="126.1298514e19e6ad91fa80899495835f8b.YC1zbfCkrQ8k8uy9tlOsTLx2BJZOoHh4ozlm4t8.E95ktw"
+token="your token"
 
 dest_filename="$(date '+%Y-%m-%dT%H-%M-%S%Z')"
 compress_file="/home/mrgeek/${dest_filename}.7z"
