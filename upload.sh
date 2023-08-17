@@ -1,16 +1,15 @@
 #!/usr/bin/env bash
 
-token="your token"
+token="126.1298514e19e6ad91fa80899495835f8b.YC1zbfCkrQ8k8uy9tlOsTLx2BJZOoHh4ozlm4t8.E95ktw"
 
 dest_filename="$(date '+%Y-%m-%dT%H-%M-%S%Z')"
-# 这里改成自己的路径
 compress_file="/home/mrgeek/${dest_filename}.7z"
 wait2upload_dirs="/home/mrgeek/document/"
-# 这里改成自己想要上传的文件夹
 7z a $compress_file ${wait2upload_dirs}books/ ${wait2upload_dirs}codes/ ${wait2upload_dirs}files-master/ ${wait2upload_dirs}picture/
 file_size="$(stat -c %s ${compress_file})"
 
 piece_dir="/home/mrgeek/up_tmp/"
+rm -rf $piece_dir
 mkdir -p $piece_dir
 if [ $file_size -gt 4194304 ]; then
 	split -b 4194304 $compress_file $piece_dir
