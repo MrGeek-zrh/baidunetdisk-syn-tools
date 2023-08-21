@@ -12,3 +12,6 @@ bash upload.sh
 ```
 
 Then, just wait for a moment.When the script returns a JSON string with an error code of 0, it indicates that the script has run successfully, meaning that the file backup was successful.You will be able to find this compressed file on Baidu Netdisk.
+
+==================================================
+- [ ] Pending bugfix : when running the upload.sh script, an error with code 10 is returned.
